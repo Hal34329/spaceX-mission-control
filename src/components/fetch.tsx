@@ -1,3 +1,4 @@
+// Borrar
 import { useEffect } from "react"
 import type { Launch } from "../types/launch";
 
@@ -18,21 +19,16 @@ const Fetch = ({ launches, setLaunches }: FetchProps ) => {
             }
         }
         fetchData();
-    }, []);
+    }, [setLaunches]);
 
     return(
         <ul>
-            {/* <pre className="text-xs overflow-auto">
-                {JSON.stringify(launches[0], null, 2)}
-            </pre> */}
-            <ul>
-                {launches.map(launch => (
-                    <li key={launch.id}>
-                        {launch.name}
-                    </li>
-               
-                ))}
-            </ul>
+            {launches.map(launch => (
+                <li key={launch.id}>
+                    {launch.name}
+                </li>
+            
+            ))}
         </ul>
     )
 }
