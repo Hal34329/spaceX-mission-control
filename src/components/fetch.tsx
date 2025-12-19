@@ -1,25 +1,12 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
+import type { Launch } from "../types/launch";
 
-type Launch = {
-  id: string
-  name: string
-  date_utc: string
-  success: boolean | null
-  links: {
-    patch: {
-      small: string | null
-      large: string | null
-    }
-    webcast: string 
-    article: string
-  }
-  upcoming: boolean
-  details: string | null
+type FetchProps = {
+  launches: Launch[];
+  setLaunches: React.Dispatch<React.SetStateAction<Launch[]>>;
 }
 
-const Fetch = () => {
-    const [launches, setLaunches] = useState<Launch[]>([])
-
+const Fetch = ({ launches, setLaunches }: FetchProps ) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -35,9 +22,17 @@ const Fetch = () => {
 
     return(
         <ul>
-            <pre className="text-xs overflow-auto">
-                {JSON.stringify(launches, null, 2)}
-            </pre>
+            {/* <pre className="text-xs overflow-auto">
+                {JSON.stringify(launches[0], null, 2)}
+            </pre> */}
+            <ul>
+                {launches.map(launch => (
+                    <li key={launch.id}>
+                        {launch.name}
+                    </li>
+               
+                ))}
+            </ul>
         </ul>
     )
 }
