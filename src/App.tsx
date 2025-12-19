@@ -14,6 +14,9 @@ function App() {
       {loading && <LoadingState />}
       {error && <ErrorState message={error} />}
       {!loading && !error && <LaunchGrid launches={launches} />}
+      {/* <pre>
+        {JSON.stringify(launches, null, 2)}
+      </pre> */}
     </>
   )
 }
