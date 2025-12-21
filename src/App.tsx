@@ -5,6 +5,7 @@ import { useLaunches } from './hooks/useLaunches'
 import LoadingState from './components/LoadingState'
 import ErrorState from './components/ErrorState'
 import LaunchGrid from './components/LaunchGrid'
+import Sidebar from './components/Sidebar'
 
 function App() {
   const { launches, loading, error } = useLaunches()
@@ -12,6 +13,8 @@ function App() {
   return (
     <>
     <div className='flex min-h-screen'>
+      <Sidebar />
+
       <main className='flex-1 mx-5'>
         {loading && <LoadingState />}
         {error && <ErrorState message={error} />}
