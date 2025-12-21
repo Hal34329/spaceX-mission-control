@@ -11,12 +11,13 @@ function App() {
 
   return (
     <>
-      {loading && <LoadingState />}
-      {error && <ErrorState message={error} />}
-      {!loading && !error && <LaunchGrid launches={launches} />}
-      {/* <pre>
-        {JSON.stringify(launches, null, 2)}
-      </pre> */}
+    <div className='flex min-h-screen'>
+      <main className='flex-1 mx-5'>
+        {loading && <LoadingState />}
+        {error && <ErrorState message={error} />}
+        {!loading && !error && <LaunchGrid launches={launches} />}
+      </main>
+    </div>
     </>
   )
 }
