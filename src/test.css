@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    font-family: "Spline Sans", system-ui, sans-serif;
+    color-scheme: light dark;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-bg-light);
+    color: var(--color-text-light);
+  }
+
+  .dark body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+  }
+}
+
+@layer components {
+    .btn-filter {
+        @apply py-2.5 px-5 rounded-2xl bg-gray-800 text-white font-medium border border-solid border-transparent shrink-0 cursor-pointer;
+    }
+
+    .btn-nav {
+        @apply w-full text-left px-3 py-2 rounded-lg hover:bg-neutral-800;
+    }
+}
+
+@theme {
+    /* Theme colors */
+    --color-bg-light: #f6f8f7;
+    --color-bg-dark: #112117;
+    --color-text-light: #1f2937; /* gray-800 */
+    --color-text-dark: #e6fff0;
+
+    --color-surface-dark: #1a2c23;
+    --color-surface-darker: #0d1410;
+
+    /* Primary */
+    --color-primary: #36e27b;
+    --color-primary-dark: #2ab562;
+
+    --color-spacex1: #ffffff;
+    --color-spacex2: #c8dcdc;
+    --color-spacex3: #b4c8c8;
+    --color-spacex4: #141414;
+    --color-spacex5: #000000;
+    --color-spacex6: #f0f0f0;
+
+}
