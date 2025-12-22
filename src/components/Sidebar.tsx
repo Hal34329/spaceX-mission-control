@@ -13,7 +13,7 @@ const Sidebar = () => {
 
     return(
         <>
-        <aside className="w-64 shrink-0 bg-neutral-900 border-r border-neutral-800 sticky top-0 h-screen flex flex-col">
+        <aside className="w-64 shrink-0 bg-surface-dark dark:bg-surface-darker border-r border-neutral-800 sticky top-0 h-screen flex flex-col">
             {/* Navigation / Filters */}
             <nav className="p-4 space-y-2 border-b border-neutral-800">
                 <h3>MAIN MENU</h3>
@@ -41,8 +41,6 @@ const Sidebar = () => {
                 </button>
             </nav>
 
-            <button className="btn-filter" onClick={toggleTheme}>Color</button>
-
             {/* Profile / Header */}
             <div className="p-4 border-t border-neutral-800 mt-auto">
                 <div className="flex items-center gap-3">
@@ -53,6 +51,8 @@ const Sidebar = () => {
                 </div>
                 </div>
             </div>
+            
+            <button className="btn-filter" onClick={toggleTheme}>Color</button>
         </aside>
         </>
     )

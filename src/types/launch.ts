@@ -13,4 +13,5 @@ export type Launch = {
   }
   upcoming: boolean | null;
   details: string | null;
+  flight_number: number | null;
 }

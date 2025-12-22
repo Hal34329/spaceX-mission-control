@@ -35,7 +35,7 @@
     /* Theme colors */
     --color-bg-light: #f6f8f7;
     --color-bg-dark: #112117;
-    --color-text-light: #1f2937; /* gray-800 */
+    --color-text-light: #e0fff0; /* lighter surface-dark */
     --color-text-dark: #e6fff0;
 
     --color-surface-dark: #1a2c23;
@@ -45,11 +45,13 @@
     --color-primary: #36e27b;
     --color-primary-dark: #2ab562;
 
+    --color-emerald-splash: oklch(70.192% 0.15767 160.464 / 0.20);
+    --color-emerald-green: oklch(70.192% 0.15767 160.464);
+
     --color-spacex1: #ffffff;
     --color-spacex2: #c8dcdc;
     --color-spacex3: #b4c8c8;
     --color-spacex4: #141414;
     --color-spacex5: #000000;
     --color-spacex6: #f0f0f0;
-
 }

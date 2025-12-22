@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Launch } from "../types/launch";
+import { sleep } from "../utils/sleep";
 
 export function useLaunches() {
     const [launches, setLaunches] = useState<Launch[]>([])
@@ -9,7 +10,9 @@ export function useLaunches() {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                await sleep(800);
                 const response = await fetch('https://api.spacexdata.com/v4/launches');
+                // const response = await fetch('https://api.spacexdata.com/v4/launchs'); // Simular error
                 const data = await response.json();
                 setLaunches(data);
             } catch (error) {
@@ -21,5 +24,5 @@ export function useLaunches() {
         fetchData();
     }, []);
 
-    return { launches, loading, error }
+    return { launches, loading, error, refetch: useLaunches }
 }
