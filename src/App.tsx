@@ -8,16 +8,16 @@ import LaunchGrid from './components/LaunchGrid'
 import Sidebar from './components/Sidebar'
 
 function App() {
-  const { launches, loading, error, refetch } = useLaunches()
+  const { launches, loading, error } = useLaunches()
 
   return (
     <>
     <div className='flex min-h-screen'>
       <Sidebar />
 
-      <main className='flex-1 mx-5'>
+      <main className='flex-1 mx-5 my-4'>
         {loading && <LoadingState />}
-        {error && <ErrorState message={error} onRetry={refetch} />}
+        {error && <ErrorState message={error} />}
         {!loading && !error && <LaunchGrid launches={launches} />}
       </main>
     </div>

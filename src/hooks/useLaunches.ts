@@ -24,5 +24,5 @@ export function useLaunches() {
         fetchData();
     }, []);
 
-    return { launches, loading, error, refetch: useLaunches }
+    return { launches, loading, error }
 }

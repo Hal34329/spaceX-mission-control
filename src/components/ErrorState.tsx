@@ -1,9 +1,8 @@
 type ErrorStateProps = {
   message: string
-  onRetry?: () => void
 }
 
-const ErrorState = ({ message, onRetry }: ErrorStateProps) => {
+const ErrorState = ({ message }: ErrorStateProps) => {
   return (
     <div className="flex flex-col items-center justify-center h-[calc(100vh-2rem)] gap-6 text-center">
       
@@ -32,15 +31,13 @@ const ErrorState = ({ message, onRetry }: ErrorStateProps) => {
         </p>
       </div>
 
-      {/* Action */}
-      {onRetry && (
+      {/* Action */} 
         <button
-          onClick={onRetry}
+          onClick={() => console.log("Retry to fetch")}
           className="px-5 py-2 rounded-lg bg-emerald-green text-black font-medium hover:bg-emerald-400 transition cursor-pointer"
         >
           Retry
         </button>
-      )}
     </div>
   )
 }
