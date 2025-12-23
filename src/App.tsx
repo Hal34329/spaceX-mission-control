@@ -2,10 +2,10 @@
 // import Fetch from './components/Fetch'
 // import type { Launch } from './types/launch'
 import { useLaunches } from './hooks/useLaunches'
-import LoadingState from './components/LoadingState'
-import ErrorState from './components/ErrorState'
-import LaunchGrid from './components/LaunchGrid'
-import Sidebar from './components/Sidebar'
+import LoadingState from './components/ui/LoadingState'
+import ErrorState from './components/ui/ErrorState'
+import LaunchGrid from './components/launches/LaunchGrid'
+import Sidebar from './components/layout/Sidebar'
 
 function App() {
   const { launches, loading, error } = useLaunches()
@@ -27,6 +27,5 @@ function App() {
     </>
   )
 }
-
 
 export default App

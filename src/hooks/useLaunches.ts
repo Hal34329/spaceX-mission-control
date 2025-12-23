@@ -12,7 +12,6 @@ export function useLaunches() {
             try {
                 await sleep(800);
                 const response = await fetch('https://api.spacexdata.com/v4/launches');
-                // const response = await fetch('https://api.spacexdata.com/v4/launchs'); // Simular error
                 const data = await response.json();
                 setLaunches(data);
             } catch (error) {

@@ -1,4 +1,4 @@
-import type { Launch } from "../types/launch"
+import type { Launch } from "../../types/launch"
 
 type LaunchCardProps = {
   launch: Launch
