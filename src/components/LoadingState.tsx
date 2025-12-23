@@ -16,9 +16,18 @@ const LoadingState = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-[calc(100vh-2rem)] gap-6">
-      <div className="relative w-16 h-16">
-        <div className="absolute inset-0 rounded-full border-4 border-emerald-splash" />
-        <div className="absolute inset-0 rounded-full border-4 border-emerald-green border-t-transparent animate-spin" />
+      {/* <div className="relative w-16 h-16">
+        <div className="absolute inset-0 rounded-full border-4 
+        border-red-600
+        dark:border-emerald-splash" />
+        <div className="absolute inset-0 rounded-full border-4 
+        border-blue-700
+        dark:border-emerald-green border-t-transparent animate-spin" />
+      </div> */}
+
+      <div className="relative size-16">
+        <div className="absolute inset-0 rounded-full border-4 border-red-600 dark:border-emerald-splash" />     
+        <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-500 dark:border-t-emerald-green animate-spin" />
       </div>
 
       <div className="text-center">
@@ -28,9 +37,9 @@ const LoadingState = () => {
         </p>
       </div>
 
-      <div className="w-64 h-2 rounded-full bg-emerald-splash overflow-hidden">
+      <div className="w-64 h-2 rounded-full dark:bg-emerald-splash overflow-hidden">
         <div
-          className="h-full bg-emerald-green transition-all duration-300 ease-out"
+          className="h-full bg-red-600 dark:bg-emerald-green transition-all duration-300 ease-out"
           style={{ width: `${progress}%` }}
         />
       </div>

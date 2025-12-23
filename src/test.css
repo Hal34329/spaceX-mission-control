@@ -23,15 +23,15 @@
 
 @layer components {
     .btn-filter {
-      @apply py-2.5 px-5 rounded-2xl bg-surface-dark text-text-dark font-medium border border-solid border-transparent shrink-0 cursor-pointer hover:border-primary-dark transition duration-200 ease-linear;
+      @apply py-2.5 px-5 rounded-2xl dark:bg-surface-dark dark:text-text-dark font-medium border border-solid border-transparent shrink-0 cursor-pointer dark:hover:border-primary-dark transition duration-200 ease-linear;
     }
 
     .btn-nav {
-      @apply w-full text-left px-3 py-2 rounded-lg hover:bg-neutral-800 transition duration-200 ease-linear cursor-pointer;
+      @apply w-full text-left px-3 py-2 rounded-lg dark:hover:bg-neutral-800 transition duration-200 ease-linear cursor-pointer;
     }
     
     .active-filter {
-      @apply bg-primary-dark hover:border-text-dark;
+      @apply dark:bg-primary-dark dark:hover:border-text-dark;
     }
 }
 
@@ -47,11 +47,18 @@
 
     --color-surface-dark: #1a2c23;
     --color-surface-darker: #0d1410;
+    --color-logo-dark: #8faea0;
 
     /* Primary */
     --color-primary: #36e27b;
     --color-primary-dark: #2ab562;
 
-    --color-emerald-splash: oklch(70.192% 0.15767 160.464 / 0.20);
-    --color-emerald-green: oklch(70.192% 0.15767 160.464);
+    --color-emerald-splash: hsla(160, 100%, 37%, 0.2);
+    --color-emerald-green: hsl(160, 100%, 37%);
+
+    --color-spacex-light1: hsl(0, 0%, 93%);
+    --color-spacex-light2: hsl(0, 0%, 87%);
+    --color-spacex-light3: hsl(0, 0%, 80%);
+    --color-spacex-light4: hsl(0, 0%, 73%);
+    --color-spacex-light5: hsl(0, 0%, 20%);
 }
