@@ -8,8 +8,8 @@ export type Launch = {
       small: string | null;
       large: string | null;
     }
-    webcast: string;
-    article: string;
+    webcast: string | null;
+    article: string | null;
   }
   upcoming: boolean | null;
   details: string | null;

@@ -2,11 +2,14 @@ import type { Launch } from "../types/launch"
 
 type LaunchCardProps = {
   launch: Launch
+  onClick: () => void
 }
 
-const LaunchCard = ({ launch }: LaunchCardProps) => {
+const LaunchCard = ({ launch, onClick }: LaunchCardProps) => {
   return ( 
-    <div className="w-full sm:w-72 mx-auto bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-2xl max-h-90">
+    <div 
+    onClick={onClick}
+    className="w-full sm:w-72 mx-auto bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-2xl max-h-90">
         <div className="shrink-0">
             {launch.links.patch.small ? (
                 <img className="w-full h-40 object-scale-down p-1" src={launch.links.patch.small} alt={`${launch.name} patch`} />) : (

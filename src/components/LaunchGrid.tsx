@@ -1,11 +1,17 @@
 import type { Launch } from "../types/launch"
 import LaunchCard from "./LaunchCard"
 
+import { useState } from "react"
+import LaunchDetailsOverlay from "./LaunchDetailsOverlay"
+
 type LaunchGridProps = {
     launches: Launch[]
 }
 
 const LaunchGrid = ({ launches }: LaunchGridProps) => {
+    const [selectedLaunch, setSelectedLaunch] = useState<Launch | null>(null)
+
+
     return(
         <>
         <h1 className="text-4xl font-bold text-text-lighter dark:text-text-dark">Launch Manifest</h1>
@@ -21,9 +27,14 @@ const LaunchGrid = ({ launches }: LaunchGridProps) => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {launches.map(launch => (
-                <LaunchCard key={launch.id} launch={launch} />
+                <LaunchCard key={launch.id} launch={launch} onClick={() => setSelectedLaunch(launch)} />
             ))}
         </div>
+
+        {selectedLaunch && (
+        <LaunchDetailsOverlay launch={selectedLaunch} onClose={() => setSelectedLaunch(null)}
+        />
+        )}
         </>
     )
 }
