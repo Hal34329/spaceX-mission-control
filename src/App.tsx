@@ -1,6 +1,3 @@
-// import { useState } from 'react'
-// import Fetch from './components/Fetch'
-// import type { Launch } from './types/launch'
 import { useLaunches } from './hooks/useLaunches'
 import LoadingState from './components/ui/LoadingState'
 import ErrorState from './components/ui/ErrorState'
