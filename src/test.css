@@ -37,28 +37,29 @@
 
 @theme {
     /* Theme colors */
-    --color-bg-light: #f6f8f7;
-    --color-bg-dark: #112117;
-    --color-text-light: #e0fff0; /* lighter surface-dark. */
-    --color-text-lighter: #26302b;
-    --color-text-light-muted: #3f5046;
+    --color-bg-light: #f6f8f7; /* #f6f8f7 */
+    --color-bg-dark: #112117; /* #112117 */
+    --color-text-light: #e0fff0; /* #e0fff0 Lighter surface-dark. */
+    --color-text-lighter: #26302b; /* #26302b */
+    --color-text-light-muted: #3f5046; /* #3f5046 */
     --color-text-dark: #e6fff0; /* e6fff0 */
-    --color-text-dark-muted: #98aea1;
+    --color-text-dark-muted: #98aea1; /* #98aea1 */
 
-    --color-surface-dark: #1a2c23;
-    --color-surface-darker: #0d1410;
-    --color-logo-dark: #8faea0;
+    --color-surface-dark: #1a2c23; /* #1a2c23 */
+    --color-surface-darker: #0d1410; /* #0d1410 */
+    --color-logo-dark: #8faea0; /* #8faea0 */
 
     /* Primary */
-    --color-primary: #36e27b;
-    --color-primary-dark: #2ab562;
+    --color-primary: #36e27b; /* #36e27b */
+    --color-primary-dark: #2ab562; /* #2ab562 */
 
-    --color-emerald-splash: hsla(160, 100%, 37%, 0.2);
-    --color-emerald-green: hsl(160, 100%, 37%);
-
-    --color-spacex-light1: hsl(0, 0%, 93%);
-    --color-spacex-light2: hsl(0, 0%, 87%);
-    --color-spacex-light3: hsl(0, 0%, 80%);
-    --color-spacex-light4: hsl(0, 0%, 73%);
-    --color-spacex-light5: hsl(0, 0%, 20%);
+    --color-emerald-splash: hsla(160, 100%, 37%, 0.2); /* #00bd7e33 */
+    --color-emerald-green: hsl(160, 100%, 37%); /* #00bd7e */
+    /* Possible palette: https://www.schemecolor.com/gray-web.php */
+    --color-spacex-light1: hsl(0, 0%, 93%); /* #eeeeee */
+    --color-spacex-light2: hsl(0, 0%, 87%); /* #dddddd */
+    --color-spacex-light3: hsl(0, 0%, 80%); /* #cccccc */
+    --color-spacex-light4: hsl(0, 0%, 73%); /* #bbbbbb */
+    --color-spacex-light5: hsl(0, 0%, 20%); /* #333333 */
+    /* Another possible palette: https://www.schemecolor.com/glossy-grey.php */
 }
