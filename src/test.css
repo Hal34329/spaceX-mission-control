@@ -33,6 +33,10 @@
     .active-filter {
       @apply dark:bg-primary-dark dark:hover:border-text-dark;
     }
+
+    .active-style {
+      @apply dark:bg-emerald-green/80 dark:text-text-dark;
+    }
 }
 
 @theme {
