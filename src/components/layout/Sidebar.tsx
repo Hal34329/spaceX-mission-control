@@ -1,26 +1,27 @@
-// import { useState } from "react";
 import ToggleButton from "../ui/ToggleButton";
+import FilterButton from "../ui/FilterButton";
+
+import { useState } from 'react';
+
+type FilterState = {
+  successful: boolean;
+  failed: boolean;
+}
 
 const Sidebar = () => {
-    // const toggleTheme = () => {
-    //     const root = document.documentElement;
+    // Inicializamos ambos en false
+    const [filters, setFilters] = useState<FilterState>({
+        successful: false,
+        failed: false,
+    });
 
-    //     if(root.classList.contains("dark")){
-    //         root.classList.remove("dark");
-    //         localStorage.setItem("theme", "light");
-    //         setTheme("light");
-    //     } else {
-    //         root.classList.add("dark");
-    //         localStorage.setItem("theme", "dark");
-    //         setTheme("dark");
-    //     }
-    // }
-
-    // const [theme, setTheme] = useState<"light" | "dark">(() => {
-    //     const saved = localStorage.getItem("theme")
-    //     return saved === "dark" ? "dark" : "light"
-    // })
-
+    // Función para alternar el valor
+    const toggleFilter = (key: keyof FilterState) => {
+        setFilters((prev) => ({
+        ...prev,
+        [key]: !prev[key], // Invertimos el valor actual (true -> false y viceversa)
+        }));
+    };
 
     return(
         <>
@@ -36,7 +37,7 @@ const Sidebar = () => {
             </div>
             {/* Navigation / Filters */}
             <nav className="p-4 space-y-2 border-y dark:border-surface-dark dark:text-text-dark/65">
-                <h3 className="text-xs">MAIN MENU</h3>
+                <h3 className="text-xs font-bold uppercase tracking-widest dark:text-gray-500">Main Menu</h3>
                 <button className="btn-nav">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-category mr-2" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0 3 3 0 1 0-6 0"/></svg> All missions
                 </button>
@@ -49,17 +50,27 @@ const Sidebar = () => {
             </nav>
 
             <nav className="p-4 space-y-2 border-b dark:border-surface-dark dark:text-text-dark/65">
-                <h3 className="text-xs">FILTERS</h3>
-                <button className="btn-nav">
-                Successful
-                </button>
-                <button className="btn-nav">
-                Failed
-                </button>
+                <h3 className="text-xs font-bold uppercase tracking-widest dark:text-gray-500">Filters</h3>
+                <FilterButton label="Successful" isActive={filters.successful} onClick={() => toggleFilter('successful')} />
+                <FilterButton label="Failed" isActive={filters.failed} onClick={() => toggleFilter('failed')} />
             </nav>
 
             {}
+            {/* <div className="flex flex-col gap-2 p-4">
+            <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Filters</h3>
             
+            <FilterButton 
+                label="Successful" 
+                isActive={filters.successful} 
+                onClick={() => toggleFilter('successful')} 
+            />
+            
+            <FilterButton 
+                label="Failed" 
+                isActive={filters.failed} 
+                onClick={() => toggleFilter('failed')} 
+            />
+            </div> */}
             {}
 
             {/* Profile / Header */}
@@ -73,14 +84,7 @@ const Sidebar = () => {
                     <p className="text-sm font-medium">John Titor</p>
                     <p className="text-xs dark:text-neutral-400">Mission Control</p>
                 </div>
-                </div>
-                {/* <button onClick={toggleTheme} className="p-2 rounded-md hover:bg-white/5 transition">
-                {theme === "dark" ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-sun size-5" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M8 12a4 4 0 1 0 8 0 4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></svg>
-                ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-moon size-5" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
-                )}
-                </button> */}                
+                </div>              
                 <ToggleButton />
             </div>
         </aside>

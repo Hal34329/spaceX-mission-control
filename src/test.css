@@ -27,7 +27,7 @@
     }
 
     .btn-nav {
-      @apply w-full text-left px-3 py-2 rounded-lg dark:hover:bg-neutral-800 transition duration-200 ease-linear cursor-pointer flex text-sm items-center;
+      @apply w-full text-left px-3 py-2 rounded-lg dark:hover:bg-neutral-800/50 dark:hover:text-text-dark transition duration-200 ease-linear cursor-pointer flex text-sm items-center;
     }
     
     .active-filter {
