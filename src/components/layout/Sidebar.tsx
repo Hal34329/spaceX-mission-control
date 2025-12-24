@@ -45,9 +45,9 @@ const Sidebar = () => {
                 <button className="btn-nav">
                 Past Launches
                 </button>
-                <button className="btn-nav">
+                {/* <button className="btn-nav">
                 Rockets
-                </button>
+                </button> */}
             </nav>
 
             <nav className="p-4 space-y-2 border-b dark:border-neutral-800">

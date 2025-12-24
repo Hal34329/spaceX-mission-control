@@ -14,10 +14,10 @@ const LaunchDetailsOverlay = ({ launch, onClose }: Props) => {
     }
 
     return (
-        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
-            <div className="absolute inset-0" onClick={onClose} />
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center animate-fade-in">
+            <div className="absolute inset-0 " onClick={onClose} />
 
-            <div className="relative z-10 w-[80vw] h-[90vh] max-w-6xl dark:bg-surface-dark rounded-xl flex flex-col" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+            <div className="relative z-10 w-[80vw] h-[90vh] max-w-6xl dark:bg-surface-dark rounded-xl flex flex-col animate-slide-up" role="dialog" aria-labelledby="modal-title" aria-modal="true">
                 <header className="px-6 py-4 border-b border-neutral-800 flex items-center shrink-0 gap-6"> {/* justify between */}
                     <div className="flex flex-col">
                     <h2 className="text-xl font-bold leading-tight" id="modal-title">
