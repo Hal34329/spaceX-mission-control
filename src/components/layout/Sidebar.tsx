@@ -1,24 +1,25 @@
-import { useState } from "react";
+// import { useState } from "react";
+import ToggleButton from "../ui/ToggleButton";
 
 const Sidebar = () => {
-    const toggleTheme = () => {
-        const root = document.documentElement;
+    // const toggleTheme = () => {
+    //     const root = document.documentElement;
 
-        if(root.classList.contains("dark")){
-            root.classList.remove("dark");
-            localStorage.setItem("theme", "light");
-            setTheme("light");
-        } else {
-            root.classList.add("dark");
-            localStorage.setItem("theme", "dark");
-            setTheme("dark");
-        }
-    }
+    //     if(root.classList.contains("dark")){
+    //         root.classList.remove("dark");
+    //         localStorage.setItem("theme", "light");
+    //         setTheme("light");
+    //     } else {
+    //         root.classList.add("dark");
+    //         localStorage.setItem("theme", "dark");
+    //         setTheme("dark");
+    //     }
+    // }
 
-    const [theme, setTheme] = useState<"light" | "dark">(() => {
-        const saved = localStorage.getItem("theme")
-        return saved === "dark" ? "dark" : "light"
-    })
+    // const [theme, setTheme] = useState<"light" | "dark">(() => {
+    //     const saved = localStorage.getItem("theme")
+    //     return saved === "dark" ? "dark" : "light"
+    // })
 
 
     return(
@@ -34,24 +35,21 @@ const Sidebar = () => {
                 </span>
             </div>
             {/* Navigation / Filters */}
-            <nav className="p-4 space-y-2 border-y dark:border-neutral-800">
-                <h3>MAIN MENU</h3>
+            <nav className="p-4 space-y-2 border-y dark:border-surface-dark dark:text-text-dark/65">
+                <h3 className="text-xs">MAIN MENU</h3>
                 <button className="btn-nav">
-                All missions
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-category mr-2" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0 3 3 0 1 0-6 0"/></svg> All missions
                 </button>
                 <button className="btn-nav">
-                Upcoming
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week mr-2" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm12-4v4M8 3v4m-4 4h16M7 14h.013m2.997 0h.005m2.995 0h.005m3 0h.005m-3.005 3h.005m-6.01 0h.005m2.995 0h.005"/></svg> Upcoming
                 </button>
                 <button className="btn-nav">
-                Past Launches
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-history mr-2" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M12 8v4l2 2"/><path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5"/></svg> Past Launches
                 </button>
-                {/* <button className="btn-nav">
-                Rockets
-                </button> */}
             </nav>
 
-            <nav className="p-4 space-y-2 border-b dark:border-neutral-800">
-                <h3>FILTERS</h3>
+            <nav className="p-4 space-y-2 border-b dark:border-surface-dark dark:text-text-dark/65">
+                <h3 className="text-xs">FILTERS</h3>
                 <button className="btn-nav">
                 Successful
                 </button>
@@ -60,8 +58,12 @@ const Sidebar = () => {
                 </button>
             </nav>
 
+            {}
+            
+            {}
+
             {/* Profile / Header */}
-            <div className="p-4 border-t dark:border-neutral-800 mt-auto flex justify-between">
+            <div className="p-4 border-t dark:border-surface-dark mt-auto flex justify-between">
                 <div className="flex items-center gap-3">
                 {/* <div className="w-10 h-10 rounded-full bg-neutral-700" /> */}
                 <div className="size-10 rounded-full overflow-hidden hover:scale-120 transition-transform duration-300">
@@ -72,13 +74,14 @@ const Sidebar = () => {
                     <p className="text-xs dark:text-neutral-400">Mission Control</p>
                 </div>
                 </div>
-                <button onClick={toggleTheme} className="p-2 rounded-md hover:bg-white/5 transition">
+                {/* <button onClick={toggleTheme} className="p-2 rounded-md hover:bg-white/5 transition">
                 {theme === "dark" ? (
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-sun size-5" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M8 12a4 4 0 1 0 8 0 4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></svg>
                 ) : (
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-moon size-5" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
                 )}
-            </button>
+                </button> */}                
+                <ToggleButton />
             </div>
         </aside>
         </>
