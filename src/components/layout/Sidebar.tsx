@@ -1,27 +1,33 @@
 import ToggleButton from "../ui/ToggleButton";
 import FilterButton from "../ui/FilterButton";
+import type { FilterState } from "../../App";
+// import { useState } from 'react';
 
-import { useState } from 'react';
+// type FilterState = {
+//   successful: boolean;
+//   failed: boolean;
+// }
 
-type FilterState = {
-  successful: boolean;
-  failed: boolean;
+
+type SidebarProps = {
+    filters: FilterState
+    onFilterChange: (key: keyof FilterState) => void
 }
 
-const Sidebar = () => {
-    // Inicializamos ambos en false
-    const [filters, setFilters] = useState<FilterState>({
-        successful: false,
-        failed: false,
-    });
+const Sidebar = ({filters, onFilterChange }: SidebarProps) => {
+    // // Inicializamos ambos en false
+    // const [filters, setFilters] = useState<FilterState>({
+    //     successful: false,
+    //     failed: false,
+    // });
 
-    // Función para alternar el valor
-    const toggleFilter = (key: keyof FilterState) => {
-        setFilters((prev) => ({
-        ...prev,
-        [key]: !prev[key], // Invertimos el valor actual (true -> false y viceversa)
-        }));
-    };
+    // // Función para alternar el valor
+    // const onFilterChange = (key: keyof FilterState) => {
+    //     setFilters((prev) => ({
+    //     ...prev,
+    //     [key]: !prev[key], // Invertimos el valor actual (true -> false y viceversa)
+    //     }));
+    // };
 
     return(
         <>
@@ -51,27 +57,9 @@ const Sidebar = () => {
 
             <nav className="p-4 space-y-2 border-b dark:border-surface-dark dark:text-text-dark/65">
                 <h3 className="text-xs font-bold uppercase tracking-widest dark:text-gray-500">Filters</h3>
-                <FilterButton label="Successful" isActive={filters.successful} onClick={() => toggleFilter('successful')} />
-                <FilterButton label="Failed" isActive={filters.failed} onClick={() => toggleFilter('failed')} />
+                <FilterButton label="Successful" isActive={filters.successful} onClick={() => onFilterChange('successful')} />
+                <FilterButton label="Failed" isActive={filters.failed} onClick={() => onFilterChange('failed')} />
             </nav>
-
-            {}
-            {/* <div className="flex flex-col gap-2 p-4">
-            <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Filters</h3>
-            
-            <FilterButton 
-                label="Successful" 
-                isActive={filters.successful} 
-                onClick={() => toggleFilter('successful')} 
-            />
-            
-            <FilterButton 
-                label="Failed" 
-                isActive={filters.failed} 
-                onClick={() => toggleFilter('failed')} 
-            />
-            </div> */}
-            {}
 
             {/* Profile / Header */}
             <div className="p-4 border-t dark:border-surface-dark mt-auto flex justify-between">
