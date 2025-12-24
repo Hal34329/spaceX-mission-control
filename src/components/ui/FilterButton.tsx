@@ -6,7 +6,7 @@ type FilterButtonProps = {
 
 const FilterButton = ({ label, isActive, onClick }: FilterButtonProps) => {
   return (
-    <button onClick={onClick} className="flex items-center gap-4 group transition cursor-pointer w-full text-left px-3 py-2 rounded-lg dark:hover:bg-neutral-800/50 duration-200 ease-linear text-sm">
+    <button onClick={onClick} className="btn-nav gap-4 group">
       <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-200 border-2 ${isActive ? 'dark:bg-emerald-green dark:border-emerald-splash' : 'bg-transparent dark:border-gray-600 dark:group-hover:border-gray-400'}`}>
         {isActive && (
           <svg className="w-5 h-5 text-black stroke-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
