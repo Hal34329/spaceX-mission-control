@@ -53,7 +53,7 @@ const LaunchDetailsOverlay = ({ launch, onClose }: Props) => {
                             <div className="sticky bottom-0 right-0 flex justify-end mt-2">
                                 <a href={launch.links.article} target="_blank" rel="noreferrer" className="dark:bg-surface-darker/50 p-2 rounded-full dark:hover:bg-emerald-splash/50 transition-colors"> 
                                 {/* Whatever SVG that gets used */}
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="text-primary-dark" viewBox="0 0 97.75 97.75"><path d="M48.875 0C21.883 0 0 21.883 0 48.875S21.883 97.75 48.875 97.75 97.75 75.867 97.75 48.875 75.867 0 48.875 0..." /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="dark:text-primary-dark" viewBox="0 0 97.75 97.75"><path d="M48.875 0C21.883 0 0 21.883 0 48.875S21.883 97.75 48.875 97.75 97.75 75.867 97.75 48.875 75.867 0 48.875 0..." /></svg>
                                 </a>
                             </div>
                             )}

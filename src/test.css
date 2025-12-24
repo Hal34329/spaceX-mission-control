@@ -27,7 +27,7 @@
     }
 
     .btn-nav {
-      @apply w-full text-left px-3 py-2 rounded-lg dark:hover:bg-neutral-800/50 dark:hover:text-text-dark transition duration-200 ease-linear cursor-pointer flex text-sm items-center;
+      @apply w-full text-left px-3 py-2 rounded-lg hover:bg-smoke-splash hover:text-primary-light dark:hover:bg-neutral-800/50 dark:hover:text-text-dark transition duration-200 ease-linear cursor-pointer flex text-sm items-center;
     }
     
     .active-filter {
@@ -35,17 +35,17 @@
     }
 
     .active-style {
-      @apply dark:bg-emerald-green/80 dark:text-text-dark;
+      @apply bg-smoke-splash text-primary-light dark:bg-emerald-green/80 dark:text-text-dark;
     }
 }
 
 @theme {
     /* Theme colors */
-    --color-bg-light: #f6f8f7; /* #f6f8f7 */
+    --color-bg-light: hsl(0, 0%, 93%); /* #f6f8f7 */
     --color-bg-dark: #112117; /* #112117 */
-    --color-text-light: #e0fff0; /* #e0fff0 Lighter surface-dark. */
-    --color-text-lighter: #26302b; /* #26302b */
-    --color-text-light-muted: #3f5046; /* #3f5046 */
+    --color-text-light: hsl(0, 0%, 20%); /* #e0fff0 Lighter surface-dark. */
+    /* --color-text-lighter: #26302b; #26302b */
+    --color-text-light-muted: hsl(0, 0%, 45%);; /* #3f5046 */
     --color-text-dark: #e6fff0; /* e6fff0 */
     --color-text-dark-muted: #98aea1; /* #98aea1 */
 
@@ -53,12 +53,22 @@
     --color-surface-darker: #0d1410; /* #0d1410 */
     --color-logo-dark: #8faea0; /* #8faea0 */
 
+    --color-surface-light: hsl(0, 0%, 20%);
+    --color-surface-lighter: hsl(0, 0%, 12%);
+
     /* Primary */
     --color-primary: #36e27b; /* #36e27b */
     --color-primary-dark: #2ab562; /* #2ab562 */
 
     --color-emerald-splash: hsla(160, 100%, 37%, 0.2); /* #00bd7e33 */
     --color-emerald-green: hsl(160, 100%, 37%); /* #00bd7e */
+
+    --color-primary-light: hsl(0, 0%, 87%);
+    --color-primary-lighter: hsl(0, 0%, 65%);
+
+    --color-smoke-splash: hsla(0, 0%, 20%, 0.5);
+    --color-smoke-gray: hsla(0, 0%, 20%, 0.5);
+
     /* Possible palette: https://www.schemecolor.com/gray-web.php */
     --color-spacex-light1: hsl(0, 0%, 93%); /* #eeeeee */
     --color-spacex-light2: hsl(0, 0%, 87%); /* #dddddd */

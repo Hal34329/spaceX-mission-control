@@ -25,7 +25,7 @@ const LaunchCard = ({ launch, onClick }: LaunchCardProps) => {
             <h3 className="text-lg font-bold dark:text-text-dark truncate mt-4">
                 {launch.name}
             </h3>
-            <h4 className="text-xs text-text-dark-muted flex items-center mt-1 mb-2">
+            <h4 className="text-xs dark:text-text-dark-muted flex items-center mt-1 mb-2">
                 <span className="dark:bg-emerald-splash rounded-full px-2 border border-solid dark:border-emerald-splash/80">
                     # {launch.flight_number} 
                 </span>
