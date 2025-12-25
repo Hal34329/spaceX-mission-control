@@ -31,9 +31,11 @@ function App() {
       setMissionType(type);
     };
 
+    
+
   return (
     <>
-    <div className='flex min-h-screen'>
+    <div className='flex min-h-dvh'>
       <Sidebar filters={filters} onFilterChange={toggleFilter} 
       currentMissionType={missionType} onMissionTypeChange={handleMissionTypeChange}
       />

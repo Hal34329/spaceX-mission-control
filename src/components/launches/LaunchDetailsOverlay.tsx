@@ -52,7 +52,7 @@ const LaunchDetailsOverlay = ({ launch, onClose }: Props) => {
                             {launch.links.article && (
                             <div className="sticky bottom-0 right-0 flex justify-end mt-2">
                                 <a href={launch.links.article} target="_blank" rel="noreferrer" className="bg-surface-light/40 dark:bg-surface-darker/50 p-2 rounded-full dark:hover:bg-emerald-splash/50 transition-colors"> 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-external-link text-primary-light/80 dark:text-primary-dark"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-external-link text-primary-light/80 dark:text-primary-dark"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>
                                 </a>
                             </div>
                             )}
