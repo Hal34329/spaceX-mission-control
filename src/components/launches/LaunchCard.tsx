@@ -15,7 +15,7 @@ const LaunchCard = ({ launch, onClick }: LaunchCardProps) => {
         <>
         <div onClick={onClick} className="flex flex-col p-4 bg-surface-light/80 dark:bg-surface-dark rounded-xl cursor-pointer hover:ring hover:ring-black/95 dark:hover:ring-emerald-green hover:scale-105 transition duration-300">
             <div className="flex justify-between items-start w-full">
-                <div className="shrink-0 dark:bg-text-dark-muted/10 rounded-full">
+                <div className="shrink-0 bg-text-light-muted/70 dark:bg-text-dark-muted/10 rounded-full">
                     <img className={`h-15 object-scale-down p-1 m-2 transition-opacity duration-500 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`} src={launch.links.patch.small || "/patch-placeholder.png"} alt={`${launch.name} patch`} onLoad={() => setIsImageLoaded(true)} />
                 </div>
             <span className="self-center">

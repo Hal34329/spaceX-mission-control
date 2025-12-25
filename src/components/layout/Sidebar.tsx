@@ -7,12 +7,28 @@ type SidebarProps = {
     onFilterChange: (key: keyof FilterState) => void
     currentMissionType: MissionType
     onMissionTypeChange: (type: MissionType) => void
+    isOpen: boolean;
+    onClose: () => void;
 }
 
-const Sidebar = ({filters, onFilterChange, currentMissionType, onMissionTypeChange }: SidebarProps) => {
+const Sidebar = ({filters, onFilterChange, currentMissionType, onMissionTypeChange, isOpen, onClose }: SidebarProps) => {
     return(
         <>
-        <aside className="w-[80%] max-w-70 lg:w-64 shrink-0 bg-black/95 dark:bg-surface-darker border-r border-neutral-400 dark:border-neutral-800 sticky top-0 h-dvh min-h-dvh flex flex-col overflow-y-auto">
+        {isOpen && (
+                <div 
+                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+                    onClick={onClose} 
+                />
+        )}
+
+        {/* <aside className="w-[80%] max-w-70 lg:w-64 shrink-0 bg-black/95 dark:bg-surface-darker border-r border-neutral-400 dark:border-neutral-800 sticky top-0 h-dvh min-h-dvh flex flex-col overflow-y-auto"> */}
+        <aside className={`
+                ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
+                lg:translate-x-0 fixed lg:sticky top-0 left-0 z-50
+                w-70 lg:w-64 shrink-0 h-dvh transition-transform duration-300
+                bg-black/95 dark:bg-surface-darker border-r border-neutral-800
+                flex flex-col overflow-y-auto
+            `}>
             {/* Header */}
             <div className="flex items-center gap-2 m-4 border-neutral-100 dark:border-neutral-800">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-rocket size-10 text-primary-lighter dark:text-primary" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M4 13a8 8 0 0 1 7 7 6 6 0 0 0 3-5 9 9 0 0 0 6-8 3 3 0 0 0-3-3 9 9 0 0 0-8 6 6 6 0 0 0-5 3"/><path d="M7 14a6 6 0 0 0-3 6 6 6 0 0 0 6-3m4-8a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/></svg>
