@@ -1,10 +1,12 @@
 // Intended to use with TailwindCSS
 import { useState } from "react";
-type ToggleButtonProps = {
-    hover?: string
-}
+// type ToggleButtonProps = {
+//     hover?: string
+// }
+// original prop: { hover = "white/5" }:ToggleButtonProps
+// original className={`p-2 rounded-md transition hover:bg-${hover}`}
 
-const ToggleButton = ({ hover = "white/5" }:ToggleButtonProps) => {
+const ToggleButton = () => {
     const toggleTheme = () => {
         const root = document.documentElement;
 
@@ -25,7 +27,7 @@ const ToggleButton = ({ hover = "white/5" }:ToggleButtonProps) => {
     })
         
     return(
-        <button onClick={toggleTheme} className={`p-2 rounded-md transition hover:bg-${hover}`}>
+        <button onClick={toggleTheme} className="p-2 rounded-md transition hover:bg-white/5"> 
                 {theme === "dark" ? (
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-sun size-5" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M8 12a4 4 0 1 0 8 0 4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></svg>
                 ) : (
