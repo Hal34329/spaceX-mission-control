@@ -16,19 +16,19 @@ const StatusLabel = ({ success, upcoming }: StatusProps) => {
   const statusConfig = {
     upcoming: {
       text: "Upcoming",
-      classes: "bg-blue-500/10 text-blue-500 border-blue-500/20",
+      classes: "bg-blue-900/30 text-blue-500 border-blue-900 dark:bg-blue-500/10 dark:text-blue-500 dark:border-blue-500/20",
     },
     success: {
       text: "Success",
-      classes: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+      classes: "bg-emerald-900/30 text-emerald-500 border-emerald-900/90 dark:bg-emerald-500/10 dark:text-emerald-500 dark:border-emerald-500/20",
     },
     failed: {
       text: "Failed",
-      classes: "bg-red-500/10 text-red-500 border-red-500/20",
+      classes: "bg-red-900/30 text-red-500/90 border-red-900/90 dark:bg-red-500/10 dark:text-red-500 dark:border-red-500/20",
     },
     unknown: {
       text: "Unknown",
-      classes: "bg-zinc-500/10 text-zinc-400 border-zinc-500/20",
+      classes: "bg-zinc-900/30 text-zinc-400 border-zinc-900/80 dark:bg-zinc-500/10 dark:text-zinc-400 dark:border-zinc-500/20",
     },
   };
 

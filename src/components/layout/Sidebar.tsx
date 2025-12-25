@@ -18,8 +18,8 @@ const Sidebar = ({filters, onFilterChange, currentMissionType, onMissionTypeChan
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="icon icon-tabler icons-tabler-outline icon-tabler-rocket size-10 text-primary-lighter dark:text-primary" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M4 13a8 8 0 0 1 7 7 6 6 0 0 0 3-5 9 9 0 0 0 6-8 3 3 0 0 0-3-3 9 9 0 0 0-8 6 6 6 0 0 0-5 3"/><path d="M7 14a6 6 0 0 0-3 6 6 6 0 0 0 6-3m4-8a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/></svg>
 
                 <span>
-                    <h1 className="font-bold text-primary-light dark:text-text-dark">SPACEX</h1>
-                    <h2 className="text-primary-lighter dark:text-primary-dark text-sm">DATA</h2>
+                    <h1 className="font-bold text-primary-light dark:text-text-dark tracking-wider">SPACEX</h1>
+                    <h2 className="text-primary-lighter dark:text-primary-dark text-sm tracking-widest">DATA</h2>
                 </span>
             </div>
             {/* Navigation / Filters */}

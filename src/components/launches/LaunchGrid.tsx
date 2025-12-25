@@ -59,13 +59,13 @@ const LaunchGrid = ({ launches, activeFilters, missionType }: LaunchGridProps) =
         <h1 className="text-4xl font-bold text-text-light dark:text-text-dark">Launch Manifest</h1>
         <h3 className="text-text-light-muted dark:text-text-dark-muted">Tracking upcoming and past missions.</h3>
         <div className="flex items-center gap-4 flex-col lg:flex-row w-full max-w-full overflow-hidden">
-            <form role="search" id="jobs-search-form" className="min-w-full lg:min-w-md max-w-dvw flex-1 flex p-2.5 rounded-2xl bg-surface-light dark:bg-surface-dark mt-6 lg:my-5 items-center transition-colors"> 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" className="icon icon-tabler icons-tabler-outline icon-tabler-search" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0m18 11-6-6"/></svg>
-                <input type="text" placeholder="Search mission name or  #flight number..." name="searchText" className="searchText flex-1 ml-2 focus:outline-none" 
+            <form role="search" id="jobs-search-form" className="min-w-full lg:min-w-md max-w-dvw flex-1 flex p-2.5 rounded-2xl bg-surface-light/80 dark:bg-surface-dark mt-6 lg:my-5 items-center transition-colors"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" className="icon icon-tabler icons-tabler-outline icon-tabler-search text-primary-light dark:text-text-dark" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0m18 11-6-6"/></svg>
+                <input type="text" placeholder="Search mission name or  #flight number..." name="searchText" className="searchText flex-1 ml-2 focus:outline-none text-primary-light dark:text-text-dark" 
                 value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
                 />
             </form>
-            <h3 className="flex items-center px-6 p-2.5 dark:bg-surface-dark/80 dark:text-text-primary-dark font-medium text-sm rounded-xl whitespace-nowrap lg:mt-0 lg:ml-5">
+            <h3 className="flex items-center px-6 p-2.5 bg-surface-light/80 text-primary-light dark:bg-surface-dark/80 dark:text-text-dark font-medium text-sm rounded-xl whitespace-nowrap lg:mt-0 lg:ml-5">
                 Showing {displayedLaunches.length} of {filteredLaunches.length} results
             </h3>
         </div>
@@ -77,7 +77,7 @@ const LaunchGrid = ({ launches, activeFilters, missionType }: LaunchGridProps) =
         
         {visibleCount < filteredLaunches.length && (
             <div className="flex justify-center mt-10 mb-5">
-                <button onClick={() => setVisibleCount(prev => prev + 6)} className="px-6 py-2 dark:bg-surface-dark dark:hover:bg-neutral-800/40 text-text-dark rounded-xl transition-colors border dark:border-emerald-splash/80 cursor-pointer" >
+                <button onClick={() => setVisibleCount(prev => prev + 6)} className="px-6 py-2 bg-surface-light/80 hover:bg-neutral-800 text-primary-light dark:bg-surface-dark dark:hover:bg-neutral-800/40 dark:text-text-dark rounded-xl transition-colors ring ring-black/95 dark:ring-emerald-splash/80 cursor-pointer" >
                     Show More Missions
                 </button>
             </div>
