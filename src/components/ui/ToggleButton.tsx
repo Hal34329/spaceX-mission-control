@@ -1,10 +1,5 @@
 // Intended to use with TailwindCSS
 import { useState } from "react";
-// type ToggleButtonProps = {
-//     hover?: string
-// }
-// original prop: { hover = "white/5" }:ToggleButtonProps
-// original className={`p-2 rounded-md transition hover:bg-${hover}`}
 
 const ToggleButton = () => {
     const toggleTheme = () => {

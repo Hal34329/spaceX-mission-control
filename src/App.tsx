@@ -1,9 +1,9 @@
 import { useLaunches } from './hooks/useLaunches'
+import { useState } from 'react'
+import Sidebar from './components/layout/Sidebar'
 import LoadingState from './components/ui/LoadingState'
 import ErrorState from './components/ui/ErrorState'
 import LaunchGrid from './components/launches/LaunchGrid'
-import Sidebar from './components/layout/Sidebar'
-import { useState } from 'react'
 
 export type FilterState = {
   successful: boolean;
