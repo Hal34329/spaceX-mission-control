@@ -17,8 +17,8 @@ const LaunchDetailsOverlay = ({ launch, onClose }: Props) => {
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center animate-fade-in">
             <div className="absolute inset-0 " onClick={onClose} />
 
-            <div className="relative z-10 w-[80vw] h-[90vh] max-w-6xl bg-surface-light dark:bg-surface-dark rounded-xl flex flex-col animate-slide-up" role="dialog" aria-labelledby="modal-title" aria-modal="true">
-                <header className="px-6 py-4 border-b border-primary-lighter/40 dark:border-emerald-splash flex items-center shrink-0 gap-6">
+            <div className="relative z-10 w-[95%] md:w-[85%] lg:w-[80%] h-[90vh] max-w-6xl bg-surface-light dark:bg-surface-dark rounded-xl flex flex-col animate-slide-up" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+                <header className="px-4 lg:px-6 py-4 border-b border-primary-lighter/40 dark:border-emerald-splash flex items-center shrink-0 gap-6">
                     <div className="flex flex-col">
                     <h2 className="text-xl font-bold leading-tight text-primary-light dark:text-text-dark" id="modal-title">
                         {launch.name}
@@ -34,12 +34,12 @@ const LaunchDetailsOverlay = ({ launch, onClose }: Props) => {
                 </header>
 
                 <main className="flex flex-col flex-1 min-h-0 overflow-hidden">
-                    <section className="flex-1 min-h-0 w-full flex items-center justify-center pb-6">
-                        <div className="w-full max-w-4xl max-h-full aspect-video">
+                    <section className="flex-1 min-h-0 w-full flex items-center justify-center pb-6 overflow-y-auto p-4 md:p-2 space-y-6">
                         {launch.links.webcast && (
+                        <div className="w-full max-w-4xl max-h-full aspect-video rounded-lg overflow-hidden bg-black shrink-0 shadow-lg">
                             <iframe className="w-full h-full rounded-lg" src={getYoutubeEmbed(launch.links.webcast)} allowFullScreen />
-                        )}
                         </div>
+                        )}
                     </section>
                     <article className="shrink-0 max-h-[30%] px-6 pb-6 mt-auto">
                         <div className="relative overflow-y-auto max-h-full bg-surface-lighter dark:bg-surface-darker/40 p-4 rounded-lg group">            

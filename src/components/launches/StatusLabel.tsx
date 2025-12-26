@@ -35,7 +35,7 @@ const StatusLabel = ({ success, upcoming }: StatusProps) => {
   const { text, classes } = statusConfig[status];
 
   return (
-    <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${classes}`}>
+    <span className={`px-2.5 mr-6 py-0.5 rounded-full text-xs font-medium border ${classes}`}>
       {text}
     </span>
   );

@@ -37,6 +37,7 @@
     .active-style {
       @apply bg-smoke-splash text-primary-light dark:bg-emerald-green/80 dark:text-text-dark;
     }
+
 }
 
 @theme {
