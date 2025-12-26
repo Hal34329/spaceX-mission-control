@@ -5,7 +5,7 @@ import LoadingState from './components/ui/LoadingState'
 import ErrorState from './components/ui/ErrorState'
 import LaunchGrid from './components/launches/LaunchGrid'
 
-import IconMenu from './components/IconMenu'
+import IconMenu from './components/ui/IconMenu'
 
 export type FilterState = {
   successful: boolean;
