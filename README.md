@@ -1,7 +1,7 @@
 # SpaceX Mission Control Dashboard
 
-![Desktop](public/Dashboard_Screenshot.png)
 ![Mobile](public/Dashboard_Mobile_Screenshot.jpeg)
+![Desktop](public/Dashboard_Screenshot.png)
 
 ## Architecture and Tech Stack
 For this project, I decided to maintain a modular and scalable structure to ensure a clear separation of concerns across all components:
