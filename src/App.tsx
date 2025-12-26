@@ -40,21 +40,23 @@ function App() {
 
   return (
     <>
-    <div className='flex min-h-dvh'>
+    <div className='flex min-h-dvh flex-col lg:flex-row'>
       <Sidebar filters={filters} onFilterChange={toggleFilter} 
       currentMissionType={missionType} onMissionTypeChange={handleMissionTypeChange}
       isOpen={isSidebarOpen} onClose={closeSidebar}
       />
 
+      <header className="lg:hidden flex items-center bg-black/85 dark:bg-surface-darker text-primary-light dark:text-text-dark tracking-wider mb-2 py-2">
+        <button onClick={toggleSidebar} className="p-2">
+          <IconMenu /> 
+        </button>
+        <span className="ml-2 font-bold">SPACEX</span>
+      </header>
+
       <main className='flex-1 mx-5 my-4'>
         {loading && <LoadingState />}
         {error && <ErrorState message={error} />}
-        <header className="lg:hidden flex items-center bg-black/85 dark:bg-surface-darker text-primary-light dark:text-text-dark tracking-wider rounded-lg mb-2">
-          <button onClick={toggleSidebar} className="p-2">
-            <IconMenu /> 
-          </button>
-          <span className="ml-2 font-bold">SPACEX</span>
-        </header>
+        
         {!loading && !error && <LaunchGrid launches={launches} activeFilters={filters} 
         missionType={missionType}
         />}

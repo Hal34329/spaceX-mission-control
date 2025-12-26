@@ -67,7 +67,7 @@
     --color-primary-lighter: hsl(0, 0%, 65%);
 
     --color-smoke-splash: hsla(0, 0%, 20%, 0.5);
-    --color-smoke-gray: hsla(0, 0%, 20%, 0.5);
+    --color-smoke-gray: hsla(0, 0%, 20%);
 
     /* Possible palette: https://www.schemecolor.com/gray-web.php */
     --color-spacex-light1: hsl(0, 0%, 93%); /* #eeeeee */
