@@ -49,12 +49,6 @@ const LaunchGrid = ({ launches, activeFilters, missionType }: LaunchGridProps) =
     
     const displayedLaunches = filteredLaunches.slice(0, visibleCount);
 
-    // useEffect(() => {
-    //     setVisibleCount(6);
-    // }, [searchTerm, missionType, activeFilters]);
-
-    // --- SOLUCIÓN: Ajuste de estado durante el renderizado ---
-    // Guardamos una "foto" de los filtros anteriores para comparar
     const [prevFilters, setPrevFilters] = useState({ searchTerm, missionType, activeFilters });
 
     if (
@@ -62,11 +56,9 @@ const LaunchGrid = ({ launches, activeFilters, missionType }: LaunchGridProps) =
         prevFilters.missionType !== missionType ||
         prevFilters.activeFilters !== activeFilters
     ) {
-        // Si algo cambió, reseteamos el contador inmediatamente
         setPrevFilters({ searchTerm, missionType, activeFilters });
         setVisibleCount(6);
     }
-    // ---------------------------------------------------------
 
     return(
         <>
