@@ -46,14 +46,14 @@ function App() {
       isOpen={isSidebarOpen} onClose={closeSidebar}
       />
 
-      <header className="lg:hidden flex items-center bg-black/85 dark:bg-surface-darker text-primary-light dark:text-text-dark tracking-wider mb-2 py-2">
+      <header className="dark:bg-surface-darker text-primary-light dark:text-text-dark mb-2 flex items-center bg-black/85 py-2 tracking-wider lg:hidden">
         <button onClick={toggleSidebar} className="p-2">
           <IconMenu /> 
         </button>
         <span className="ml-2 font-bold">SPACEX</span>
       </header>
 
-      <main className='flex-1 mx-5 my-4'>
+      <main className='mx-5 my-4 flex-1'>
         {loading && <LoadingState />}
         {error && <ErrorState message={error} />}
         
